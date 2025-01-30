@@ -23,32 +23,55 @@ def _parse_stats(soup: BeautifulSoup) -> dict:
 
     return {"season": season, "competitions": competitions, "stats": stats}
 
-
 def _parse_scouting_report(soup: BeautifulSoup) -> dict:
+    def get_text(element):
+        return element.text.strip() if element else None
+
+    # Parse footer minutes
     footer = soup.find("div", class_="footer")
-    minutes = footer.find("strong").text if footer else None
+    strong_element = footer.find("strong") if footer else None
+    minutes = get_text(strong_element)
 
     # Find all position tables dynamically
     stats = {}
     tables = soup.find_all("table", id=lambda x: x and x.startswith("scout_summary_"))
+    if not tables:
+        return {"minutes_played": minutes, "stats": stats}
 
     for table in tables:
         position = table["id"].replace("scout_summary_", "")
         position_stats = {}
 
-        for row in table.find("tbody").find_all("tr"):
+        tbody = table.find("tbody")
+        if not tbody:
+            continue
+
+        for row in tbody.find_all("tr"):
             if "spacer" in row.get("class", []):
                 continue
 
-            stat = row.find("th").text.strip()
-            per90 = row.find("td", {"data-stat": "per90"}).text.strip()
-            percentile = (
-                row.find("td", {"data-stat": "percentile"}).find("div").text.strip()
-            )
+            th_element = row.find("th")
+            per90_element = row.find("td", {"data-stat": "per90"})
+            percentile_element = row.find("td", {"data-stat": "percentile"})
+            
+            if not all([th_element, per90_element, percentile_element]):
+                continue
 
-            position_stats[stat] = {"per90": per90, "percentile": percentile}
+            stat = get_text(th_element)
+            per90 = get_text(per90_element)
+            
+            # percentile is nested in a div
+            percentile_div = percentile_element.find("div")
+            percentile = get_text(percentile_div) if percentile_div else None
 
-        stats[position] = position_stats
+            if stat:  # Only add if we have a valid stat name
+                position_stats[stat] = {
+                    "per90": per90,
+                    "percentile": percentile
+                }
+
+        if position_stats:  # Only add if we have any stats for this position
+            stats[position] = position_stats
 
     return {"minutes_played": minutes, "stats": stats}
 
@@ -111,41 +134,36 @@ def _parse_last_matches(soup: BeautifulSoup) -> list:
     if not table:
         return []
 
+    def get_text(element):
+        return element.text.strip() if element else None
+
     matches = []
     for row in table.find("tbody").find_all("tr"):
         match = {
-            "date": row.find("th", {"data-stat": "date"}).text.strip(),
-            "competition": row.find("td", {"data-stat": "round"}).text,
-            "venue": row.find("td", {"data-stat": "venue"}).text,
-            "result": row.find("td", {"data-stat": "result"}).text,
-            "team": row.find("td", {"data-stat": "team"}).text,
-            "opponent": row.find("td", {"data-stat": "opponent"}).text,
-            "position": row.find("td", {"data-stat": "position"}).text,
-            "minutes": row.find("td", {"data-stat": "minutes"}).text,
+            "date": get_text(row.find("th", {"data-stat": "date"})),
+            "competition": get_text(row.find("td", {"data-stat": "round"})),
+            "venue": get_text(row.find("td", {"data-stat": "venue"})),
+            "result": get_text(row.find("td", {"data-stat": "result"})),
+            "team": get_text(row.find("td", {"data-stat": "team"})),
+            "opponent": get_text(row.find("td", {"data-stat": "opponent"})),
+            "position": get_text(row.find("td", {"data-stat": "position"})),
+            "minutes": get_text(row.find("td", {"data-stat": "minutes"})),
             "stats": {
-                "goals": row.find("td", {"data-stat": "goals"}).text,
-                "assists": row.find("td", {"data-stat": "assists"}).text,
-                "shots": row.find("td", {"data-stat": "shots"}).text,
-                "shots_on_target": row.find(
-                    "td", {"data-stat": "shots_on_target"}
-                ).text,
-                "xg": row.find("td", {"data-stat": "xg"}).text,
-                "npxg": row.find("td", {"data-stat": "npxg"}).text,
-                "xg_assist": row.find("td", {"data-stat": "xg_assist"}).text,
-                "sca": row.find("td", {"data-stat": "sca"}).text,
-                "gca": row.find("td", {"data-stat": "gca"}).text,
-                "passes_completed": row.find(
-                    "td", {"data-stat": "passes_completed"}
-                ).text,
-                "passes_attempted": row.find("td", {"data-stat": "passes"}).text,
-                "progressive_passes": row.find(
-                    "td", {"data-stat": "progressive_passes"}
-                ).text,
-                "carries": row.find("td", {"data-stat": "carries"}).text,
-                "progressive_carries": row.find(
-                    "td", {"data-stat": "progressive_carries"}
-                ).text,
-            },
+                "goals": get_text(row.find("td", {"data-stat": "goals"})),
+                "assists": get_text(row.find("td", {"data-stat": "assists"})),
+                "shots": get_text(row.find("td", {"data-stat": "shots"})),
+                "shots_on_target": get_text(row.find("td", {"data-stat": "shots_on_target"})),
+                "xg": get_text(row.find("td", {"data-stat": "xg"})),
+                "npxg": get_text(row.find("td", {"data-stat": "npxg"})),
+                "xg_assist": get_text(row.find("td", {"data-stat": "xg_assist"})),
+                "sca": get_text(row.find("td", {"data-stat": "sca"})),
+                "gca": get_text(row.find("td", {"data-stat": "gca"})),
+                "passes_completed": get_text(row.find("td", {"data-stat": "passes_completed"})),
+                "passes_attempted": get_text(row.find("td", {"data-stat": "passes"})),
+                "progressive_passes": get_text(row.find("td", {"data-stat": "progressive_passes"})),
+                "carries": get_text(row.find("td", {"data-stat": "carries"})),
+                "progressive_carries": get_text(row.find("td", {"data-stat": "progressive_carries"}))
+            }
         }
         matches.append(match)
 

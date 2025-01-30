@@ -36,6 +36,7 @@ def test_kim_min_jae():
 
     print(fbref_data)
 
+
 def test_emile_smith_rowe():
     site = extractor.Site.FOTMOB
     url = "https://www.fotmob.com/ko/players/889534/emile-smith-rowe"
@@ -52,7 +53,6 @@ def test_emile_smith_rowe():
     print(fotmob_data)
 
     print(fbref_data)
-
 
 if __name__ == "__main__":
 
