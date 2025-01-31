@@ -1,4 +1,4 @@
-import app.core.extractor
+from app.core import extractor
 
 
 def test_son_heung_min():

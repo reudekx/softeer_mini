@@ -1,5 +1,65 @@
 from bs4 import BeautifulSoup
 
+from bs4 import BeautifulSoup
+import re
+
+def _parse_career_history(html: str) -> dict:
+    soup = BeautifulSoup(html, 'html.parser')
+    career_data = {}
+    
+    # Find all career phase sections (고위급 경력, 청년 경력, 국가대표 팀)
+    career_phases = soup.find_all('tbody', class_='css-1j17bv1-CareerPhaseTbody')
+    
+    for phase in career_phases:
+        # Get phase title from the header
+        phase_header = phase.find('h4', class_='css-1pht4b8-CareerPhaseH4')
+        if not phase_header:
+            continue
+            
+        phase_name = phase_header.text.strip()
+        career_data[phase_name] = []
+        
+        # Find all team rows in this phase
+        team_rows = phase.find_all('tr', class_='css-1k09b8v-TeamAndSeasonsCSS')
+        
+        for row in team_rows:
+            team_data = {}
+            
+            # Get team info
+            team_cell = row.find('div', class_='css-1gjc1yn-TeamCSS')
+            if team_cell:
+                # Team name
+                team_name_elem = team_cell.find('span', class_='css-1jnt5s3-TeamName')
+                if team_name_elem:
+                    team_name = team_name_elem.text.split('(')[0].strip()  # Remove any (임대) suffix
+                    team_data['team'] = team_name
+                
+                # Date range
+                date_elem = team_cell.find('span', class_='css-hrqiwh-DateCSS')
+                if date_elem:
+                    team_data['period'] = date_elem.text.strip()
+                
+                # Transfer status (임대, 임대 복귀 등)
+                transfer_suffix = team_cell.find('span', class_='css-xzamas-TransferSuffix')
+                if transfer_suffix and transfer_suffix.text.strip():
+                    team_data['status'] = transfer_suffix.text.strip(' ()')
+            
+            # Get stats
+            stats_cells = row.find_all('div', class_='css-17xcm4a-StatCell')
+            if stats_cells:
+                # Assuming the order is: appearances, goals
+                for i, stat in enumerate(stats_cells):
+                    stat_value = stat.find('span')
+                    if stat_value:
+                        if i == 1:  # Appearances
+                            team_data['appearances'] = int(stat_value.text)
+                        elif i == 2:  # Goals
+                            team_data['goals'] = int(stat_value.text)
+            
+            if team_data:
+                career_data[phase_name].append(team_data)
+    
+    return career_data
 
 def _parse_season_performance(soup: BeautifulSoup) -> dict:
     stats = {}
@@ -169,5 +229,6 @@ def parse(html: str) -> bool:
     player_stats["player_traits"] = _parse_player_traits(soup)
     player_stats["player_career_main_league"] = _parse_player_career_main_league(soup)
     player_stats["match_stats"] = _parse_match_stats(soup)
+    player_stats["career_history"] = _parse_career_history(html)
 
     return player_stats
