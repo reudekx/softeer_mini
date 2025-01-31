@@ -1,7 +1,51 @@
+'use client';
+
 import React from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from "../ui/card";
-import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, LineChart, Line } from 'recharts';
-import { User, Activity, Target } from 'lucide-react';
+import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, ReferenceLine, Label } from 'recharts';
+import { User } from 'lucide-react';
+
+interface Site {
+  siteName: string;
+  features: string[];
+}
+
+interface CommonStat {
+  value: string | number;
+  sites: string[];
+}
+
+interface UniqueStat {
+  stat: string;
+  value: string | number;
+  source: string;
+}
+
+interface SubjectiveMetric {
+  metric: string;
+  average: number;
+  FotMob?: number;
+  SofaScore?: number;
+  FBref?: number;
+  Understat?: number;
+  Opta?: number;
+  [key: string]: string | number | undefined; // For dynamic site ratings and average
+}
+
+interface PlayerInfo {
+  name: string;
+  team: string;
+  position: string;
+  photoUrl?: string;
+}
+
+interface PlayerData {
+  playerInfo: PlayerInfo;
+  commonStats: Record<string, CommonStat>;
+  uniqueStats: UniqueStat[];
+  subjectiveData: SubjectiveMetric[];
+  siteFeatures: Site[];
+}
 
 const PlayerDashboard: React.FC<{ data: PlayerData }> = ({ data }) => {
   // 평균 평점에 따른 상태 결정 함수
@@ -28,7 +72,19 @@ const PlayerDashboard: React.FC<{ data: PlayerData }> = ({ data }) => {
   };
 
   const averageRating = data.subjectiveData.find(data => data.metric === 'Match Rating')?.average || 0;
-  const status = getPlayerStatus(averageRating);
+  const status = getPlayerStatus(averageRating as number);
+
+  // 주관적 지표 데이터를 그래프용 형식으로 변환하는 함수
+  const transformMetricData = (metricData: SubjectiveMetric) => {
+    const sites = Object.keys(metricData).filter(key => 
+      key !== 'metric' && key !== 'average' && metricData[key] !== undefined
+    );
+
+    return sites.map(site => ({
+      site,
+      value: metricData[site] as number
+    }));
+  };
 
   return (
     <div className="w-full max-w-3xl mx-auto p-4 space-y-4 bg-gray-50">
@@ -50,7 +106,7 @@ const PlayerDashboard: React.FC<{ data: PlayerData }> = ({ data }) => {
         </div>
         <div className={`px-4 py-2 rounded-lg ${status.bgColor}`}>
           <p className={`text-3xl font-bold ${status.color}`}>{status.text}</p>
-          <p className="text-sm text-gray-600">평균 평점: {averageRating.toFixed(2)}</p>
+          <p className="text-sm text-gray-600">평균 평점: {(averageRating as number).toFixed(2)}</p>
         </div>
       </div>
 
@@ -90,28 +146,45 @@ const PlayerDashboard: React.FC<{ data: PlayerData }> = ({ data }) => {
         </CardContent>
       </Card>
 
-      {/* 주관적 지표 비교 */}
+      {/* 주관적 지표 비교 (그래프) */}
       <Card>
         <CardHeader>
           <CardTitle>주관적 지표 비교</CardTitle>
         </CardHeader>
         <CardContent>
-          <div className="space-y-6">
-            {data.subjectiveData.map((data, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {data.subjectiveData.map((metricData, index) => (
               <div key={index} className="space-y-2">
-                <h3 className="font-semibold">{data.metric}</h3>
-                <div className="grid grid-cols-4 gap-4">
-                  {Object.entries(data)
-                    .filter(([key]) => key !== 'metric')
-                    .map(([site, value]) => (
-                      <div key={site} className="p-4 bg-gray-50 rounded">
-                        <p className="text-sm font-medium">{site}</p>
-                        <p className="text-xl font-bold">{typeof value === 'number' ? value.toFixed(2) : value}</p>
-                        {site === 'average' && (
-                          <p className="text-xs text-blue-600">전체 평균</p>
-                        )}
-                      </div>
-                    ))}
+                <div className="flex justify-between items-center">
+                  <h3 className="font-semibold">{metricData.metric}</h3>
+                  <span className="text-sm text-gray-500">평균: {metricData.average.toFixed(2)}</span>
+                </div>
+                <div className="h-48">
+                  <ResponsiveContainer width="100%" height="100%">
+                    <BarChart
+                      data={transformMetricData(metricData)}
+                      margin={{ top: 20, right: 30, left: 20, bottom: 5 }}
+                    >
+                      <CartesianGrid strokeDasharray="3 3" />
+                      <XAxis dataKey="site" />
+                      <YAxis />
+                      <Tooltip />
+                      <Bar dataKey="value" fill="#8884d8" name="평가점수" />
+                      <ReferenceLine 
+                        y={metricData.average} 
+                        stroke="#ff0000" 
+                        strokeWidth={2}
+                      >
+                        <Label 
+                          value={`평균: ${metricData.average.toFixed(2)}`}
+                          position="right"
+                          fill="#ff0000"
+                          fontSize={12}
+                          fontWeight="bold"
+                        />
+                      </ReferenceLine>
+                    </BarChart>
+                  </ResponsiveContainer>
                 </div>
               </div>
             ))}
