@@ -7,8 +7,14 @@ import { User } from 'lucide-react';
 
 interface PlayerInfo {
   name: string;
-  team: string;
+  dateOfBirth: string;
+  age: number;
+  placeOfBirth: string;
+  height: string;
+  citizenship: string[];
   position: string;
+  foot: string;
+  team: string;
   photoUrl?: string;
 }
 
@@ -39,6 +45,10 @@ interface RecentMatch {
   opponent: string;
   result: string;
   minutesPlayed: number;
+  goals: number;
+  assists: number;
+  yellowCards: number;
+  redCards: number;
   rating: number;
 }
 
@@ -88,28 +98,42 @@ const PlayerDashboard: React.FC<{ data: PlayerData }> = ({ data }) => {
   };
 
   return (
-    <div className="w-full max-w-3xl mx-auto p-4 space-y-4 bg-gray-50">
-      {/* Header */}
-      <div className="flex items-center space-x-4 bg-white p-6 rounded-lg shadow">
-        <div className="w-24 h-24 bg-gray-200 rounded-full flex items-center justify-center">
-          {data.playerInfo.photoUrl ? (
-            <img src={data.playerInfo.photoUrl} alt={data.playerInfo.name} className="w-full h-full rounded-full object-cover" />
-          ) : (
-            <User size={48} />
-          )}
-        </div>
-        <div className="flex-grow">
-          <h1 className="text-2xl font-bold">{data.playerInfo.name}</h1>
-          <p className="text-gray-600">{data.playerInfo.team} | {data.playerInfo.position}</p>
-          <div className="mt-2">
-            <span className="text-sm text-gray-500">데이터 출처: WhoScored, FotMob, SofaScore, FBref, Transfermarkt</span>
-          </div>
-        </div>
-        <div className={`px-4 py-2 rounded-lg ${status.bgColor}`}>
-          <p className={`text-3xl font-bold ${status.color}`}>{status.text}</p>
-          <p className="text-sm text-gray-600">평균 평점: {(averageRating as number).toFixed(2)}</p>
-        </div>
+<div className="w-full max-w-3xl mx-auto p-4 space-y-4 bg-gray-50">
+  {/* Header */}
+  <div className="flex items-center space-x-4 bg-white p-6 rounded-lg shadow">
+    <div className="w-24 h-24 bg-gray-200 rounded-full flex items-center justify-center">
+      {data.playerInfo.photoUrl ? (
+        <img 
+          src={data.playerInfo.photoUrl} 
+          alt={data.playerInfo.name} 
+          className="w-full h-full rounded-full object-cover" 
+        />
+      ) : (
+        <User size={48} />
+      )}
+    </div>
+    <div className="flex-grow">
+      <h1 className="text-2xl font-bold">{data.playerInfo.name}</h1>
+      <div className="space-y-1">
+        <p className="text-gray-600">
+          {data.playerInfo.team} | {data.playerInfo.position}
+        </p>
+        <p className="text-sm text-gray-600">
+          {data.playerInfo.dateOfBirth} ({data.playerInfo.age}세) | {data.playerInfo.height}
+        </p>
+        <p className="text-sm text-gray-600">
+          출생지: {data.playerInfo.placeOfBirth} | 국적: {data.playerInfo.citizenship.join(', ')} | 주발: {data.playerInfo.foot}
+        </p>
       </div>
+      <div className="mt-2">
+        <span className="text-sm text-gray-500">데이터 출처: WhoScored, FotMob, SofaScore, FBref, Transfermarkt</span>
+      </div>
+    </div>
+    <div className={`px-4 py-2 rounded-lg ${status.bgColor}`}>
+      <p className={`text-3xl font-bold ${status.color}`}>{status.text}</p>
+      <p className="text-sm text-gray-600">평균 평점: {(averageRating as number).toFixed(2)}</p>
+    </div>
+  </div>
 
       {/* Common Stats */}
       <Card>
@@ -193,36 +217,57 @@ const PlayerDashboard: React.FC<{ data: PlayerData }> = ({ data }) => {
         </CardContent>
       </Card>
 
-      {/* Recent Matches */}
-      <Card>
-        <CardHeader>
-          <CardTitle>최근 경기</CardTitle>
-        </CardHeader>
-        <CardContent>
-          <div className="space-y-4">
-            {data.recentMatches.map((match, index) => (
-              <div key={index} className="p-4 bg-gray-50 rounded grid grid-cols-6 gap-4">
-                <div className="text-center">
-                  <p className="text-sm text-gray-600">{match.date}</p>
-                </div>
-                <div className="text-center col-span-2">
-                  <p className="font-semibold">{match.opponent}</p>
-                </div>
-                <div className="text-center">
-                  <p className="font-bold">{match.result}</p>
-                </div>
-                <div className="text-center">
-                  <p className="text-sm text-gray-600">{match.minutesPlayed}분 출전</p>
-                </div>
-                <div className="text-center">
-                  <p className="text-xl font-bold">{match.rating.toFixed(1)}</p>
-                  <p className="text-xs text-gray-500">평점</p>
-                </div>
-              </div>
-            ))}
+{/* Recent Matches */}
+{/* Recent Matches */}
+<Card>
+  <CardHeader>
+    <CardTitle>최근 경기</CardTitle>
+  </CardHeader>
+  <CardContent>
+    <div className="space-y-4">
+      {data.recentMatches.map((match, index) => (
+        <div key={index} className="p-4 bg-gray-50 rounded grid grid-cols-9 gap-4 items-center">
+          <div className="text-center whitespace-nowrap">
+            <p className="text-sm text-gray-600">{match.date}</p>
           </div>
-        </CardContent>
-      </Card>
+          <div className="text-center col-span-2">
+            <p className="font-semibold">{match.opponent}</p>
+          </div>
+          <div className="text-center whitespace-nowrap">
+            <p className="font-bold">{match.result}</p>
+          </div>
+          <div className="text-center whitespace-nowrap">
+            <p className="text-sm text-gray-600">{match.minutesPlayed}분 출전</p>
+          </div>
+          <div className="text-center">
+            <p className="text-sm font-medium">{match.goals}</p>
+            <p className="text-xs text-gray-500">골</p>
+          </div>
+          <div className="text-center">
+            <p className="text-sm font-medium">{match.assists}</p>
+            <p className="text-xs text-gray-500">어시스트</p>
+          </div>
+          <div className="text-center">
+            <div className="flex justify-center gap-2">
+              <div>
+                <p className="text-sm font-medium text-yellow-500">{match.yellowCards}</p>
+                <p className="text-xs text-gray-500">경고</p>
+              </div>
+              <div>
+                <p className="text-sm font-medium text-red-500">{match.redCards}</p>
+                <p className="text-xs text-gray-500">퇴장</p>
+              </div>
+            </div>
+          </div>
+          <div className="text-center">
+            <p className="text-xl font-bold">{match.rating.toFixed(1)}</p>
+            <p className="text-xs text-gray-500">평점</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </CardContent>
+</Card>
     </div>
   );
 };
