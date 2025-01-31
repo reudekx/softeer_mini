@@ -1,0 +1,356 @@
+{
+  "stats": {
+    "season": "2024-2025",
+    "competitions": [
+      "Premier League",
+      "Champions Lg"
+    ],
+    "stats": {
+      "MP": [
+        "15",
+        "6"
+      ],
+      "Min": [
+        "955",
+        "262"
+      ],
+      "Gls": [
+        "1",
+        "1"
+      ],
+      "Ast": [
+        "2",
+        "2"
+      ],
+      "xG": [
+        "1.2",
+        "1.4"
+      ],
+      "npxG": [
+        "1.2",
+        "1.4"
+      ],
+      "xAG": [
+        "1.7",
+        "1.4"
+      ],
+      "SCA": [
+        "36",
+        "14"
+      ],
+      "GCA": [
+        "5",
+        "3"
+      ]
+    }
+  },
+  "scouting_report": {
+    "minutes_played": "1588 minutes",
+    "stats": {
+      "AM": {
+        "Non-Penalty Goals": {
+          "per90": "0.11",
+          "percentile": "9"
+        },
+        "npxG: Non-Penalty xG": {
+          "per90": "0.22",
+          "percentile": "46"
+        },
+        "Shots Total": {
+          "per90": "1.70",
+          "percentile": "16"
+        },
+        "Assists": {
+          "per90": "0.28",
+          "percentile": "74"
+        },
+        "xAG: Exp. Assisted Goals": {
+          "per90": "0.22",
+          "percentile": "56"
+        },
+        "npxG + xAG": {
+          "per90": "0.44",
+          "percentile": "48"
+        },
+        "Shot-Creating Actions": {
+          "per90": "3.51",
+          "percentile": "40"
+        },
+        "Passes Attempted": {
+          "per90": "34.69",
+          "percentile": "44"
+        },
+        "Pass Completion %": {
+          "per90": "86.1%",
+          "percentile": "97"
+        },
+        "Progressive Passes": {
+          "per90": "3.85",
+          "percentile": "52"
+        },
+        "Progressive Carries": {
+          "per90": "3.51",
+          "percentile": "51"
+        },
+        "Successful Take-Ons": {
+          "per90": "1.42",
+          "percentile": "44"
+        },
+        "Touches (Att Pen)": {
+          "per90": "4.42",
+          "percentile": "53"
+        },
+        "Progressive Passes Rec": {
+          "per90": "6.06",
+          "percentile": "21"
+        },
+        "Tackles": {
+          "per90": "1.36",
+          "percentile": "64"
+        },
+        "Interceptions": {
+          "per90": "0.57",
+          "percentile": "77"
+        },
+        "Blocks": {
+          "per90": "1.13",
+          "percentile": "78"
+        },
+        "Clearances": {
+          "per90": "0.51",
+          "percentile": "47"
+        },
+        "Aerials Won": {
+          "per90": "0.28",
+          "percentile": "30"
+        }
+      }
+    }
+  },
+  "similar_players": {
+    "AM": [
+      {
+        "name": "Bryan Gil",
+        "id": "Bryan-Gil",
+        "nation": {
+          "name": "ESP",
+          "code": "ES"
+        },
+        "team": "Girona"
+      },
+      {
+        "name": "Rémy Cabella",
+        "id": "Remy-Cabella",
+        "nation": {
+          "name": "FRA",
+          "code": "FR"
+        },
+        "team": "Lille"
+      },
+      {
+        "name": "Dennis Man",
+        "id": "Dennis-Man",
+        "nation": {
+          "name": "ROU",
+          "code": "RO"
+        },
+        "team": "Parma"
+      },
+      {
+        "name": "John McGinn",
+        "id": "John-McGinn",
+        "nation": {
+          "name": "SCO",
+          "code": "SCT"
+        },
+        "team": "Aston Villa"
+      },
+      {
+        "name": "Julian Brandt",
+        "id": "Julian-Brandt",
+        "nation": {
+          "name": "GER",
+          "code": "DE"
+        },
+        "team": "Dortmund"
+      },
+      {
+        "name": "Jeremie Boga",
+        "id": "Jeremie-Boga",
+        "nation": {
+          "name": "CIV",
+          "code": "CI"
+        },
+        "team": "Nice"
+      },
+      {
+        "name": "Leandro Trossard",
+        "id": "Leandro-Trossard",
+        "nation": {
+          "name": "BEL",
+          "code": "BE"
+        },
+        "team": "Arsenal"
+      },
+      {
+        "name": "Enzo Millot",
+        "id": "Enzo-Millot",
+        "nation": {
+          "name": "FRA",
+          "code": "FR"
+        },
+        "team": "Stuttgart"
+      },
+      {
+        "name": "Facundo Buonanotte",
+        "id": "Facundo-Buonanotte",
+        "nation": {
+          "name": "ARG",
+          "code": "AR"
+        },
+        "team": "Leicester City"
+      },
+      {
+        "name": "Lucas Beltrán",
+        "id": "Lucas-Beltran",
+        "nation": {
+          "name": "ARG",
+          "code": "AR"
+        },
+        "team": "Fiorentina"
+      }
+    ]
+  },
+  "last_matches": [
+    {
+      "date": "2025-01-26",
+      "competition": "Matchweek 23",
+      "venue": "Home",
+      "result": "D 1–1",
+      "team": "Aston Villa",
+      "opponent": "West Ham",
+      "position": "LW",
+      "minutes": "72",
+      "stats": {
+        "goals": "1",
+        "assists": "0",
+        "shots": "1",
+        "shots_on_target": "1",
+        "xg": "0.2",
+        "npxg": "0.2",
+        "xg_assist": "0.1",
+        "sca": "4",
+        "gca": "1",
+        "passes_completed": "17",
+        "passes_attempted": "18",
+        "progressive_passes": "5",
+        "carries": "15",
+        "progressive_carries": "3"
+      }
+    },
+    {
+      "date": "2025-01-18",
+      "competition": "Matchweek 22",
+      "venue": "Away",
+      "result": "D 2–2",
+      "team": "Aston Villa",
+      "opponent": "Arsenal",
+      "position": "LW",
+      "minutes": "84",
+      "stats": {
+        "goals": "0",
+        "assists": "0",
+        "shots": "0",
+        "shots_on_target": "0",
+        "xg": "0.0",
+        "npxg": "0.0",
+        "xg_assist": "0.0",
+        "sca": "0",
+        "gca": "0",
+        "passes_completed": "15",
+        "passes_attempted": "18",
+        "progressive_passes": "2",
+        "carries": "12",
+        "progressive_carries": "2"
+      }
+    },
+    {
+      "date": "2025-01-15",
+      "competition": "Matchweek 21",
+      "venue": "Away",
+      "result": "W 1–0",
+      "team": "Aston Villa",
+      "opponent": "Everton",
+      "position": "LW",
+      "minutes": "80",
+      "stats": {
+        "goals": "0",
+        "assists": "0",
+        "shots": "2",
+        "shots_on_target": "0",
+        "xg": "0.3",
+        "npxg": "0.3",
+        "xg_assist": "0.0",
+        "sca": "2",
+        "gca": "0",
+        "passes_completed": "15",
+        "passes_attempted": "20",
+        "progressive_passes": "0",
+        "carries": "20",
+        "progressive_carries": "2"
+      }
+    },
+    {
+      "date": "2025-01-04",
+      "competition": "Matchweek 20",
+      "venue": "Home",
+      "result": "W 2–1",
+      "team": "Aston Villa",
+      "opponent": "Leicester City",
+      "position": "LW",
+      "minutes": "72",
+      "stats": {
+        "goals": "0",
+        "assists": "0",
+        "shots": "0",
+        "shots_on_target": "0",
+        "xg": "0.0",
+        "npxg": "0.0",
+        "xg_assist": "0.3",
+        "sca": "3",
+        "gca": "1",
+        "passes_completed": "33",
+        "passes_attempted": "38",
+        "progressive_passes": "3",
+        "carries": "29",
+        "progressive_carries": "0"
+      }
+    },
+    {
+      "date": "2024-12-30",
+      "competition": "Matchweek 19",
+      "venue": "Home",
+      "result": "D 2–2",
+      "team": "Aston Villa",
+      "opponent": "Brighton",
+      "position": "RW",
+      "minutes": "14",
+      "stats": {
+        "goals": "0",
+        "assists": "0",
+        "shots": "0",
+        "shots_on_target": "0",
+        "xg": "0.0",
+        "npxg": "0.0",
+        "xg_assist": "0.0",
+        "sca": "0",
+        "gca": "0",
+        "passes_completed": "5",
+        "passes_attempted": "5",
+        "progressive_passes": "2",
+        "carries": "2",
+        "progressive_carries": "0"
+      }
+    }
+  ]
+}

@@ -1,0 +1,158 @@
+{
+  "stats": {
+    "season": "2024-2025",
+    "competitions": [
+      "Premier League",
+      "Champions Lg"
+    ],
+    "stats": {
+      "MP": [
+        "4",
+        "3"
+      ],
+      "Min": [
+        "267",
+        "140"
+      ],
+      "Gls": [
+        "0",
+        "0"
+      ],
+      "Ast": [
+        "0",
+        "0"
+      ],
+      "xG": [
+        "0.0",
+        "0.0"
+      ],
+      "npxG": [
+        "0.0",
+        "0.0"
+      ],
+      "xAG": [
+        "0.1",
+        "0.0"
+      ],
+      "SCA": [
+        "9",
+        "2"
+      ],
+      "GCA": [
+        "1",
+        "1"
+      ]
+    }
+  },
+  "scouting_report": {
+    "minutes_played": "Next Match:",
+    "stats": {}
+  },
+  "similar_players": {},
+  "last_matches": [
+    {
+      "date": "2025-01-18",
+      "competition": "Matchweek 22",
+      "venue": "Away",
+      "result": "D 2–2",
+      "team": "Aston Villa",
+      "opponent": "Arsenal",
+      "position": "DM",
+      "minutes": "54",
+      "stats": {
+        "goals": "0",
+        "assists": "0",
+        "shots": "1",
+        "shots_on_target": "1",
+        "xg": "0.0",
+        "npxg": "0.0",
+        "xg_assist": "0.0",
+        "sca": "2",
+        "gca": "1",
+        "passes_completed": "6",
+        "passes_attempted": "6",
+        "progressive_passes": "0",
+        "carries": "5",
+        "progressive_carries": "0"
+      }
+    },
+    {
+      "date": "2024-11-23",
+      "competition": "Matchweek 12",
+      "venue": "Home",
+      "result": "D 2–2",
+      "team": "Aston Villa",
+      "opponent": "Crystal Palace",
+      "position": "RB",
+      "minutes": "45",
+      "stats": {
+        "goals": "0",
+        "assists": "0",
+        "shots": "0",
+        "shots_on_target": "0",
+        "xg": "0.0",
+        "npxg": "0.0",
+        "xg_assist": "0.0",
+        "sca": "1",
+        "gca": "0",
+        "passes_completed": "34",
+        "passes_attempted": "39",
+        "progressive_passes": "2",
+        "carries": "23",
+        "progressive_carries": "4"
+      }
+    },
+    {
+      "date": "2024-09-14",
+      "competition": "Matchweek 4",
+      "venue": "Home",
+      "result": "W 3–2",
+      "team": "Aston Villa",
+      "opponent": "Everton",
+      "position": "RB",
+      "minutes": "90",
+      "stats": {
+        "goals": "0",
+        "assists": "0",
+        "shots": "0",
+        "shots_on_target": "0",
+        "xg": "0.0",
+        "npxg": "0.0",
+        "xg_assist": "0.1",
+        "sca": "4",
+        "gca": "0",
+        "passes_completed": "56",
+        "passes_attempted": "62",
+        "progressive_passes": "4",
+        "carries": "47",
+        "progressive_carries": "0"
+      }
+    },
+    {
+      "date": "2024-08-31",
+      "competition": "Matchweek 3",
+      "venue": "Away",
+      "result": "W 2–1",
+      "team": "Aston Villa",
+      "opponent": "Leicester City",
+      "position": "RB",
+      "minutes": "78",
+      "stats": {
+        "goals": "0",
+        "assists": "0",
+        "shots": "0",
+        "shots_on_target": "0",
+        "xg": "0.0",
+        "npxg": "0.0",
+        "xg_assist": "0.0",
+        "sca": "2",
+        "gca": "0",
+        "passes_completed": "30",
+        "passes_attempted": "37",
+        "progressive_passes": "2",
+        "carries": "25",
+        "progressive_carries": "3"
+      }
+    }
+  ]
+}

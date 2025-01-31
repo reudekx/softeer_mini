@@ -1,0 +1,356 @@
+{
+  "stats": {
+    "season": "2024-2025",
+    "competitions": [
+      "Premier League",
+      "Champions Lg"
+    ],
+    "stats": {
+      "MP": [
+        "18",
+        "6"
+      ],
+      "Min": [
+        "1549",
+        "475"
+      ],
+      "Gls": [
+        "0",
+        "0"
+      ],
+      "Ast": [
+        "0",
+        "1"
+      ],
+      "xG": [
+        "0.5",
+        "0.1"
+      ],
+      "npxG": [
+        "0.5",
+        "0.1"
+      ],
+      "xAG": [
+        "0.0",
+        "0.0"
+      ],
+      "SCA": [
+        "11",
+        "7"
+      ],
+      "GCA": [
+        "2",
+        "1"
+      ]
+    }
+  },
+  "scouting_report": {
+    "minutes_played": "2969 minutes",
+    "stats": {
+      "CB": {
+        "Non-Penalty Goals": {
+          "per90": "0.00",
+          "percentile": "18"
+        },
+        "npxG: Non-Penalty xG": {
+          "per90": "0.02",
+          "percentile": "17"
+        },
+        "Shots Total": {
+          "per90": "0.36",
+          "percentile": "28"
+        },
+        "Assists": {
+          "per90": "0.03",
+          "percentile": "63"
+        },
+        "xAG: Exp. Assisted Goals": {
+          "per90": "0.00",
+          "percentile": "6"
+        },
+        "npxG + xAG": {
+          "per90": "0.02",
+          "percentile": "5"
+        },
+        "Shot-Creating Actions": {
+          "per90": "0.67",
+          "percentile": "30"
+        },
+        "Passes Attempted": {
+          "per90": "61.08",
+          "percentile": "62"
+        },
+        "Pass Completion %": {
+          "per90": "87.9%",
+          "percentile": "60"
+        },
+        "Progressive Passes": {
+          "per90": "3.52",
+          "percentile": "54"
+        },
+        "Progressive Carries": {
+          "per90": "1.49",
+          "percentile": "94"
+        },
+        "Successful Take-Ons": {
+          "per90": "0.55",
+          "percentile": "95"
+        },
+        "Touches (Att Pen)": {
+          "per90": "0.70",
+          "percentile": "36"
+        },
+        "Progressive Passes Rec": {
+          "per90": "0.21",
+          "percentile": "46"
+        },
+        "Tackles": {
+          "per90": "1.06",
+          "percentile": "15"
+        },
+        "Interceptions": {
+          "per90": "0.45",
+          "percentile": "2"
+        },
+        "Blocks": {
+          "per90": "1.06",
+          "percentile": "25"
+        },
+        "Clearances": {
+          "per90": "2.94",
+          "percentile": "12"
+        },
+        "Aerials Won": {
+          "per90": "0.76",
+          "percentile": "1"
+        }
+      }
+    }
+  },
+  "similar_players": {
+    "CB": [
+      {
+        "name": "Castello Lukeba",
+        "id": "Castello-Lukeba",
+        "nation": {
+          "name": "FRA",
+          "code": "FR"
+        },
+        "team": "RB Leipzig"
+      },
+      {
+        "name": "Calvin Bassey",
+        "id": "Calvin-Bassey",
+        "nation": {
+          "name": "NGA",
+          "code": "NG"
+        },
+        "team": "Fulham"
+      },
+      {
+        "name": "Moïse Bombito",
+        "id": "Moise-Bombito",
+        "nation": {
+          "name": "CAN",
+          "code": "CA"
+        },
+        "team": "Nice"
+      },
+      {
+        "name": "Nicolò Casale",
+        "id": "Nicolo-Casale",
+        "nation": {
+          "name": "ITA",
+          "code": "IT"
+        },
+        "team": "Bologna"
+      },
+      {
+        "name": "Pierre Kalulu",
+        "id": "Pierre-Kalulu",
+        "nation": {
+          "name": "FRA",
+          "code": "FR"
+        },
+        "team": "Juventus"
+      },
+      {
+        "name": "Marin Pongračić",
+        "id": "Marin-Pongracic",
+        "nation": {
+          "name": "CRO",
+          "code": "HR"
+        },
+        "team": "Fiorentina"
+      },
+      {
+        "name": "Jean-Clair Todibo",
+        "id": "Jean-Clair-Todibo",
+        "nation": {
+          "name": "FRA",
+          "code": "FR"
+        },
+        "team": "West Ham United"
+      },
+      {
+        "name": "Cristhian Mosquera",
+        "id": "Cristhian-Mosquera",
+        "nation": {
+          "name": "ESP",
+          "code": "ES"
+        },
+        "team": "Valencia"
+      },
+      {
+        "name": "Anthony Jung",
+        "id": "Anthony-Jung",
+        "nation": {
+          "name": "GER",
+          "code": "DE"
+        },
+        "team": "Werder Bremen"
+      },
+      {
+        "name": "Daley Blind",
+        "id": "Daley-Blind",
+        "nation": {
+          "name": "NED",
+          "code": "NL"
+        },
+        "team": "Girona"
+      }
+    ]
+  },
+  "last_matches": [
+    {
+      "date": "2024-12-30",
+      "competition": "Matchweek 19",
+      "venue": "Home",
+      "result": "D 2–2",
+      "team": "Aston Villa",
+      "opponent": "Brighton",
+      "position": "CB",
+      "minutes": "19",
+      "stats": {
+        "goals": "0",
+        "assists": "0",
+        "shots": "1",
+        "shots_on_target": "0",
+        "xg": "0.0",
+        "npxg": "0.0",
+        "xg_assist": "0.0",
+        "sca": "0",
+        "gca": "0",
+        "passes_completed": "13",
+        "passes_attempted": "14",
+        "progressive_passes": "0",
+        "carries": "8",
+        "progressive_carries": "0"
+      }
+    },
+    {
+      "date": "2024-12-26",
+      "competition": "Matchweek 18",
+      "venue": "Away",
+      "result": "L 0–3",
+      "team": "Aston Villa",
+      "opponent": "Newcastle Utd",
+      "position": "CB",
+      "minutes": "90",
+      "stats": {
+        "goals": "0",
+        "assists": "0",
+        "shots": "1",
+        "shots_on_target": "0",
+        "xg": "0.2",
+        "npxg": "0.2",
+        "xg_assist": "0.0",
+        "sca": "0",
+        "gca": "0",
+        "passes_completed": "42",
+        "passes_attempted": "47",
+        "progressive_passes": "1",
+        "carries": "26",
+        "progressive_carries": "1"
+      }
+    },
+    {
+      "date": "2024-12-21",
+      "competition": "Matchweek 17",
+      "venue": "Home",
+      "result": "W 2–1",
+      "team": "Aston Villa",
+      "opponent": "Manchester City",
+      "position": "CB",
+      "minutes": "90",
+      "stats": {
+        "goals": "0",
+        "assists": "0",
+        "shots": "1",
+        "shots_on_target": "1",
+        "xg": "0.0",
+        "npxg": "0.0",
+        "xg_assist": "0.0",
+        "sca": "1",
+        "gca": "0",
+        "passes_completed": "57",
+        "passes_attempted": "64",
+        "progressive_passes": "1",
+        "carries": "37",
+        "progressive_carries": "0"
+      }
+    },
+    {
+      "date": "2024-12-14",
+      "competition": "Matchweek 16",
+      "venue": "Away",
+      "result": "L 1–2",
+      "team": "Aston Villa",
+      "opponent": "Nott'ham Forest",
+      "position": "CB",
+      "minutes": "90",
+      "stats": {
+        "goals": "0",
+        "assists": "0",
+        "shots": "0",
+        "shots_on_target": "0",
+        "xg": "0.0",
+        "npxg": "0.0",
+        "xg_assist": "0.0",
+        "sca": "1",
+        "gca": "0",
+        "passes_completed": "65",
+        "passes_attempted": "72",
+        "progressive_passes": "12",
+        "carries": "54",
+        "progressive_carries": "5"
+      }
+    },
+    {
+      "date": "2024-12-07",
+      "competition": "Matchweek 15",
+      "venue": "Home",
+      "result": "W 1–0",
+      "team": "Aston Villa",
+      "opponent": "Southampton",
+      "position": "CB",
+      "minutes": "90",
+      "stats": {
+        "goals": "0",
+        "assists": "0",
+        "shots": "1",
+        "shots_on_target": "0",
+        "xg": "0.0",
+        "npxg": "0.0",
+        "xg_assist": "0.0",
+        "sca": "0",
+        "gca": "0",
+        "passes_completed": "46",
+        "passes_attempted": "49",
+        "progressive_passes": "2",
+        "carries": "30",
+        "progressive_carries": "0"
+      }
+    }
+  ]
+}

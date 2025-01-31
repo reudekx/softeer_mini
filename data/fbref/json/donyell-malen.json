@@ -1,0 +1,366 @@
+{
+  "stats": {
+    "season": "2024-2025",
+    "competitions": [
+      "Premier League",
+      "Bundesliga",
+      "Champions Lg"
+    ],
+    "stats": {
+      "MP": [
+        "1",
+        "14",
+        "5"
+      ],
+      "Min": [
+        "25",
+        "614",
+        "237"
+      ],
+      "Gls": [
+        "0",
+        "3",
+        "2"
+      ],
+      "Ast": [
+        "0",
+        "0",
+        "1"
+      ],
+      "xG": [
+        "0.0",
+        "2.9",
+        "1.6"
+      ],
+      "npxG": [
+        "0.0",
+        "2.9",
+        "1.6"
+      ],
+      "xAG": [
+        "0.0",
+        "0.2",
+        "0.9"
+      ],
+      "SCA": [
+        "0",
+        "12",
+        "7"
+      ],
+      "GCA": [
+        "0",
+        "3",
+        "2"
+      ]
+    }
+  },
+  "scouting_report": {
+    "minutes_played": "1616 minutes",
+    "stats": {
+      "AM": {
+        "Non-Penalty Goals": {
+          "per90": "0.67",
+          "percentile": "99"
+        },
+        "npxG: Non-Penalty xG": {
+          "per90": "0.50",
+          "percentile": "97"
+        },
+        "Shots Total": {
+          "per90": "3.56",
+          "percentile": "93"
+        },
+        "Assists": {
+          "per90": "0.11",
+          "percentile": "19"
+        },
+        "xAG: Exp. Assisted Goals": {
+          "per90": "0.16",
+          "percentile": "30"
+        },
+        "npxG + xAG": {
+          "per90": "0.66",
+          "percentile": "90"
+        },
+        "Shot-Creating Actions": {
+          "per90": "2.67",
+          "percentile": "9"
+        },
+        "Passes Attempted": {
+          "per90": "27.29",
+          "percentile": "8"
+        },
+        "Pass Completion %": {
+          "per90": "75.7%",
+          "percentile": "48"
+        },
+        "Progressive Passes": {
+          "per90": "2.56",
+          "percentile": "17"
+        },
+        "Progressive Carries": {
+          "per90": "3.06",
+          "percentile": "37"
+        },
+        "Successful Take-Ons": {
+          "per90": "1.50",
+          "percentile": "47"
+        },
+        "Touches (Att Pen)": {
+          "per90": "6.46",
+          "percentile": "87"
+        },
+        "Progressive Passes Rec": {
+          "per90": "10.47",
+          "percentile": "81"
+        },
+        "Tackles": {
+          "per90": "0.33",
+          "percentile": "1"
+        },
+        "Interceptions": {
+          "per90": "0.28",
+          "percentile": "22"
+        },
+        "Blocks": {
+          "per90": "0.33",
+          "percentile": "3"
+        },
+        "Clearances": {
+          "per90": "0.50",
+          "percentile": "46"
+        },
+        "Aerials Won": {
+          "per90": "0.45",
+          "percentile": "47"
+        }
+      }
+    }
+  },
+  "similar_players": {
+    "AM": [
+      {
+        "name": "Dodi Lukebakio",
+        "id": "Dodi-Lukebakio",
+        "nation": {
+          "name": "BEL",
+          "code": "BE"
+        },
+        "team": "Sevilla"
+      },
+      {
+        "name": "Harvey Barnes",
+        "id": "Harvey-Barnes",
+        "nation": {
+          "name": "ENG",
+          "code": "ENG"
+        },
+        "team": "Newcastle United"
+      },
+      {
+        "name": "Brennan Johnson",
+        "id": "Brennan-Johnson",
+        "nation": {
+          "name": "WAL",
+          "code": "WLS"
+        },
+        "team": "Tottenham Hotspur"
+      },
+      {
+        "name": "Keito Nakamura",
+        "id": "Keito-Nakamura",
+        "nation": {
+          "name": "JPN",
+          "code": "JP"
+        },
+        "team": "Reims"
+      },
+      {
+        "name": "Noni Madueke",
+        "id": "Noni-Madueke",
+        "nation": {
+          "name": "ENG",
+          "code": "ENG"
+        },
+        "team": "Chelsea"
+      },
+      {
+        "name": "Gustav Isaksen",
+        "id": "Gustav-Isaksen",
+        "nation": {
+          "name": "DEN",
+          "code": "DK"
+        },
+        "team": "Lazio"
+      },
+      {
+        "name": "Gabriel Martinelli",
+        "id": "Gabriel-Martinelli",
+        "nation": {
+          "name": "BRA",
+          "code": "BR"
+        },
+        "team": "Arsenal"
+      },
+      {
+        "name": "Alejandro Garnacho",
+        "id": "Alejandro-Garnacho",
+        "nation": {
+          "name": "ARG",
+          "code": "AR"
+        },
+        "team": "Manchester United"
+      },
+      {
+        "name": "Rafael Leão",
+        "id": "Rafael-Leao",
+        "nation": {
+          "name": "POR",
+          "code": "PT"
+        },
+        "team": "Milan"
+      },
+      {
+        "name": "Leandro Trossard",
+        "id": "Leandro-Trossard",
+        "nation": {
+          "name": "BEL",
+          "code": "BE"
+        },
+        "team": "Arsenal"
+      }
+    ]
+  },
+  "last_matches": [
+    {
+      "date": "2025-01-10",
+      "competition": "Matchweek 16",
+      "venue": "Home",
+      "result": "L 2–3",
+      "team": "Dortmund",
+      "opponent": "Leverkusen",
+      "position": "RM",
+      "minutes": "13",
+      "stats": {
+        "goals": "0",
+        "assists": "0",
+        "shots": "1",
+        "shots_on_target": "0",
+        "xg": "0.1",
+        "npxg": "0.1",
+        "xg_assist": "0.0",
+        "sca": "0",
+        "gca": "0",
+        "passes_completed": "3",
+        "passes_attempted": "3",
+        "progressive_passes": "0",
+        "carries": "3",
+        "progressive_carries": "0"
+      }
+    },
+    {
+      "date": "2024-12-22",
+      "competition": "Matchweek 15",
+      "venue": "Away",
+      "result": "W 3–1",
+      "team": "Dortmund",
+      "opponent": "Wolfsburg",
+      "position": "RM",
+      "minutes": "62",
+      "stats": {
+        "goals": "1",
+        "assists": "0",
+        "shots": "3",
+        "shots_on_target": "1",
+        "xg": "0.6",
+        "npxg": "0.6",
+        "xg_assist": "0.2",
+        "sca": "3",
+        "gca": "1",
+        "passes_completed": "17",
+        "passes_attempted": "25",
+        "progressive_passes": "6",
+        "carries": "23",
+        "progressive_carries": "4"
+      }
+    },
+    {
+      "date": "2024-12-07",
+      "competition": "Matchweek 13",
+      "venue": "Away",
+      "result": "D 1–1",
+      "team": "Dortmund",
+      "opponent": "Gladbach",
+      "position": "RW",
+      "minutes": "33",
+      "stats": {
+        "goals": "0",
+        "assists": "0",
+        "shots": "3",
+        "shots_on_target": "1",
+        "xg": "0.2",
+        "npxg": "0.2",
+        "xg_assist": "0.0",
+        "sca": "1",
+        "gca": "0",
+        "passes_completed": "12",
+        "passes_attempted": "16",
+        "progressive_passes": "2",
+        "carries": "18",
+        "progressive_carries": "4"
+      }
+    },
+    {
+      "date": "2024-11-30",
+      "competition": "Matchweek 12",
+      "venue": "Home",
+      "result": "D 1–1",
+      "team": "Dortmund",
+      "opponent": "Bayern Munich",
+      "position": "LW",
+      "minutes": "17",
+      "stats": {
+        "goals": "0",
+        "assists": "0",
+        "shots": "0",
+        "shots_on_target": "0",
+        "xg": "0.0",
+        "npxg": "0.0",
+        "xg_assist": "0.0",
+        "sca": "0",
+        "gca": "0",
+        "passes_completed": "1",
+        "passes_attempted": "3",
+        "progressive_passes": "0",
+        "carries": "5",
+        "progressive_carries": "1"
+      }
+    },
+    {
+      "date": "2024-11-23",
+      "competition": "Matchweek 11",
+      "venue": "Home",
+      "result": "W 4–0",
+      "team": "Dortmund",
+      "opponent": "Freiburg",
+      "position": "RM",
+      "minutes": "90",
+      "stats": {
+        "goals": "0",
+        "assists": "0",
+        "shots": "4",
+        "shots_on_target": "1",
+        "xg": "0.3",
+        "npxg": "0.3",
+        "xg_assist": "0.0",
+        "sca": "2",
+        "gca": "0",
+        "passes_completed": "23",
+        "passes_attempted": "30",
+        "progressive_passes": "4",
+        "carries": "34",
+        "progressive_carries": "5"
+      }
+    }
+  ]
+}

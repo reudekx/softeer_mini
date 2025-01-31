@@ -1,0 +1,34 @@
+{
+  "stats": {
+    "season": "2024-2025",
+    "competitions": [
+      "Premier League"
+    ],
+    "stats": {
+      "MP": [
+        "1"
+      ],
+      "GA": [
+        "1"
+      ],
+      "PSxG": [
+        "1.1"
+      ],
+      "SoTA": [
+        "3"
+      ],
+      "Save%": [
+        "66.7"
+      ],
+      "GA90": [
+        "2.00"
+      ]
+    }
+  },
+  "scouting_report": {
+    "minutes_played": null,
+    "stats": {}
+  },
+  "similar_players": {},
+  "last_matches": []
+}

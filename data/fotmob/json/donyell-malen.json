@@ -1,0 +1,234 @@
+{
+  "season_performance": {},
+  "player_traits": {
+    "Touches": "17%",
+    "Shot attempts": "93%",
+    "Goals": "98%",
+    "Chances created": "22%",
+    "Aerial duels won": "34%",
+    "Defensive actions": "2%"
+  },
+  "player_career_main_league": {
+    "main_league": "Premier League 2024/2025",
+    "Goals": "0",
+    "Assists": "0",
+    "Started": "0",
+    "Matches": "1",
+    "Minutes played": "25",
+    "Rating": "5.92",
+    "Yellow cards": "0",
+    "Red cards": "0"
+  },
+  "match_stats": [
+    {
+      "league": "Premier League",
+      "date": "Jan 26",
+      "opponent": "West Ham United",
+      "score": "1-1",
+      "minutes": "25",
+      "goals": "0",
+      "assists": "0",
+      "yellow_cards": "0",
+      "red_cards": "0",
+      "rating": "5.9"
+    },
+    {
+      "league": "Bundesliga",
+      "date": "Jan 10",
+      "opponent": "Bayer Leverkusen",
+      "score": "2-3",
+      "minutes": "12",
+      "goals": "0",
+      "assists": "0",
+      "yellow_cards": "0",
+      "red_cards": "0",
+      "rating": "5.9"
+    },
+    {
+      "league": "Bundesliga",
+      "date": "Dec 22, 2024",
+      "opponent": "Wolfsburg",
+      "score": "1-3",
+      "minutes": "63",
+      "goals": "1",
+      "assists": "0",
+      "yellow_cards": "1",
+      "red_cards": "0",
+      "rating": "7.7"
+    },
+    {
+      "league": "Champions League",
+      "date": "Dec 11, 2024",
+      "opponent": "Barcelona",
+      "score": "2-3",
+      "minutes": "17",
+      "goals": "0",
+      "assists": "0",
+      "yellow_cards": "0",
+      "red_cards": "0",
+      "rating": "6.2"
+    },
+    {
+      "league": "Bundesliga",
+      "date": "Dec 7, 2024",
+      "opponent": "Borussia Mönchengladbach",
+      "score": "1-1",
+      "minutes": "32",
+      "goals": "0",
+      "assists": "0",
+      "yellow_cards": "0",
+      "red_cards": "0",
+      "rating": "6.5"
+    },
+    {
+      "league": "Bundesliga",
+      "date": "Nov 30, 2024",
+      "opponent": "Bayern München",
+      "score": "1-1",
+      "minutes": "16",
+      "goals": "0",
+      "assists": "0",
+      "yellow_cards": "0",
+      "red_cards": "0",
+      "rating": "5.9"
+    },
+    {
+      "league": "Champions League",
+      "date": "Nov 27, 2024",
+      "opponent": "Dinamo Zagreb",
+      "score": "0-3",
+      "minutes": "75",
+      "goals": "0",
+      "assists": "0",
+      "yellow_cards": "0",
+      "red_cards": "0",
+      "rating": "7.4"
+    },
+    {
+      "league": "Bundesliga",
+      "date": "Nov 23, 2024",
+      "opponent": "Freiburg",
+      "score": "4-0",
+      "minutes": "90",
+      "goals": "0",
+      "assists": "0",
+      "yellow_cards": "0",
+      "red_cards": "0",
+      "rating": "7.1"
+    },
+    {
+      "league": "UEFA Nations League A Grp. 3",
+      "date": "Nov 19, 2024",
+      "opponent": "Bosnia and Herzegovina",
+      "score": "1-1",
+      "minutes": "24",
+      "goals": "0",
+      "assists": "0",
+      "yellow_cards": "0",
+      "red_cards": "0",
+      "rating": "6.4"
+    },
+    {
+      "league": "UEFA Nations League A Grp. 3",
+      "date": "Nov 16, 2024",
+      "opponent": "Hungary",
+      "score": "4-0",
+      "minutes": "84",
+      "goals": "0",
+      "assists": "1",
+      "yellow_cards": "0",
+      "red_cards": "0",
+      "rating": "8.2"
+    }
+  ],
+  "career_history": {
+    "Senior career": [
+      {
+        "team": "Aston Villa",
+        "period": "Jan 2025 - now",
+        "appearances": 1,
+        "goals": 0
+      },
+      {
+        "team": "Borussia Dortmund",
+        "period": "Jul 2021 - Jan 2025",
+        "appearances": 132,
+        "goals": 39
+      },
+      {
+        "team": "PSV Eindhoven",
+        "period": "Aug 2017 - Jul 2021",
+        "appearances": 116,
+        "goals": 55
+      },
+      {
+        "team": "Jong PSV",
+        "period": "Sep 2017 - Jun 2018",
+        "appearances": 22,
+        "goals": 13
+      },
+      {
+        "team": "Arsenal",
+        "period": "Jul 2017 - Aug 2017"
+      }
+    ],
+    "Youth career": [
+      {
+        "team": "Jong PSV",
+        "period": "Nov 2017 - Jun 2018",
+        "appearances": 3,
+        "goals": 2
+      },
+      {
+        "team": "Arsenal U23",
+        "period": "Jul 2016 - Aug 2017",
+        "appearances": 13,
+        "goals": 3
+      },
+      {
+        "team": "Arsenal U19",
+        "period": "Jul 2015 - Aug 2017",
+        "appearances": 12,
+        "goals": 0
+      },
+      {
+        "team": "Arsenal U18",
+        "period": "Jul 2016 - Jun 2017",
+        "appearances": 18,
+        "goals": 9
+      }
+    ],
+    "National team": [
+      {
+        "team": "Netherlands",
+        "period": "Aug 2019 - now",
+        "appearances": 41,
+        "goals": 9
+      },
+      {
+        "team": "Netherlands U23",
+        "period": "Mar 2019 - now",
+        "appearances": 1,
+        "goals": 0
+      },
+      {
+        "team": "Netherlands U21",
+        "period": "Sep 2018 - Aug 2019",
+        "appearances": 5,
+        "goals": 2
+      },
+      {
+        "team": "Netherlands U19",
+        "period": "Oct 2017 - Oct 2018",
+        "appearances": 6,
+        "goals": 4
+      },
+      {
+        "team": "Netherlands U17",
+        "period": "Jan 2015 - May 2016",
+        "appearances": 13,
+        "goals": 1
+      }
+    ]
+  }
+}

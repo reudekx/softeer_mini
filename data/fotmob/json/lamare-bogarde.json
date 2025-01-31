@@ -1,0 +1,298 @@
+{
+  "season_performance": {
+    "ShootingRank": {
+      "Goals": "0",
+      "Expected goals (xG)": "0.04",
+      "xG on target (xGOT)": "0.10",
+      "Non-penalty xG": "0.04",
+      "Shots": "1",
+      "Shots on target": "1",
+      "Assists": "0",
+      "Expected assists (xA)": "0.12",
+      "Successful passes": "115",
+      "Pass accuracy": "86.5%",
+      "Accurate long balls": "3",
+      "Long ball accuracy": "37.5%",
+      "Chances created": "2",
+      "Successful dribbles": "2",
+      "Dribble success": "100.0%",
+      "Touches": "188",
+      "Touches in opposition box": "1",
+      "Dispossessed": "6",
+      "Fouls won": "5",
+      "Tackles won": "6",
+      "Tackles won %": "54.5%",
+      "Duels won": "19",
+      "Duels won %": "50.0%",
+      "Aerial duels won": "1",
+      "Aerial duels won %": "20.0%",
+      "Interceptions": "1",
+      "Fouls committed": "5",
+      "Recoveries": "8",
+      "Dribbled past": "4",
+      "Yellow cards": "1",
+      "Red cards": "0"
+    },
+    "Passing": {
+      "Assists": "0",
+      "Expected assists (xA)": "0.12",
+      "Successful passes": "115",
+      "Pass accuracy": "86.5%",
+      "Accurate long balls": "3",
+      "Long ball accuracy": "37.5%",
+      "Chances created": "2",
+      "Successful dribbles": "2",
+      "Dribble success": "100.0%",
+      "Touches": "188",
+      "Touches in opposition box": "1",
+      "Dispossessed": "6",
+      "Fouls won": "5",
+      "Tackles won": "6",
+      "Tackles won %": "54.5%",
+      "Duels won": "19",
+      "Duels won %": "50.0%",
+      "Aerial duels won": "1",
+      "Aerial duels won %": "20.0%",
+      "Interceptions": "1",
+      "Fouls committed": "5",
+      "Recoveries": "8",
+      "Dribbled past": "4",
+      "Yellow cards": "1",
+      "Red cards": "0"
+    },
+    "Possession": {
+      "Successful dribbles": "2",
+      "Dribble success": "100.0%",
+      "Touches": "188",
+      "Touches in opposition box": "1",
+      "Dispossessed": "6",
+      "Fouls won": "5",
+      "Tackles won": "6",
+      "Tackles won %": "54.5%",
+      "Duels won": "19",
+      "Duels won %": "50.0%",
+      "Aerial duels won": "1",
+      "Aerial duels won %": "20.0%",
+      "Interceptions": "1",
+      "Fouls committed": "5",
+      "Recoveries": "8",
+      "Dribbled past": "4",
+      "Yellow cards": "1",
+      "Red cards": "0"
+    },
+    "Defending": {
+      "Tackles won": "6",
+      "Tackles won %": "54.5%",
+      "Duels won": "19",
+      "Duels won %": "50.0%",
+      "Aerial duels won": "1",
+      "Aerial duels won %": "20.0%",
+      "Interceptions": "1",
+      "Fouls committed": "5",
+      "Recoveries": "8",
+      "Dribbled past": "4",
+      "Yellow cards": "1",
+      "Red cards": "0"
+    },
+    "Discipline": {
+      "Yellow cards": "1",
+      "Red cards": "0"
+    }
+  },
+  "player_traits": {
+    "Touches": "54%",
+    "Shot attempts": "4%",
+    "Goals": "0%",
+    "Chances created": "91%",
+    "Aerial duels won": "1%",
+    "Defensive actions": "49%"
+  },
+  "player_career_main_league": {
+    "main_league": "Premier League 2024/2025",
+    "Goals": "0",
+    "Assists": "0",
+    "Started": "3",
+    "Matches": "4",
+    "Minutes played": "267",
+    "Rating": "6.56",
+    "Yellow cards": "1",
+    "Red cards": "0"
+  },
+  "match_stats": [
+    {
+      "league": "Champions League",
+      "date": "Jan 29",
+      "opponent": "Celtic",
+      "score": "4-2",
+      "minutes": "90",
+      "goals": "0",
+      "assists": "0",
+      "yellow_cards": "0",
+      "red_cards": "0",
+      "rating": "7.2"
+    },
+    {
+      "league": "Premier League",
+      "date": "Jan 26",
+      "opponent": "West Ham United",
+      "score": "1-1",
+      "minutes": "0",
+      "goals": "0",
+      "assists": "0",
+      "yellow_cards": "0",
+      "red_cards": "0",
+      "rating": null
+    },
+    {
+      "league": "Champions League",
+      "date": "Jan 21",
+      "opponent": "Monaco",
+      "score": "1-0",
+      "minutes": "4",
+      "goals": "0",
+      "assists": "0",
+      "yellow_cards": "0",
+      "red_cards": "0",
+      "rating": null
+    },
+    {
+      "league": "Premier League",
+      "date": "Jan 18",
+      "opponent": "Arsenal",
+      "score": "2-2",
+      "minutes": "53",
+      "goals": "0",
+      "assists": "0",
+      "yellow_cards": "0",
+      "red_cards": "0",
+      "rating": "6.7"
+    },
+    {
+      "league": "Premier League",
+      "date": "Jan 15",
+      "opponent": "Everton",
+      "score": "0-1",
+      "minutes": "0",
+      "goals": "0",
+      "assists": "0",
+      "yellow_cards": "0",
+      "red_cards": "0",
+      "rating": null
+    },
+    {
+      "league": "FA Cup",
+      "date": "Jan 10",
+      "opponent": "West Ham United",
+      "score": "2-1",
+      "minutes": "0",
+      "goals": "0",
+      "assists": "0",
+      "yellow_cards": "0",
+      "red_cards": "0",
+      "rating": null
+    },
+    {
+      "league": "Premier League",
+      "date": "Jan 4",
+      "opponent": "Leicester City",
+      "score": "2-1",
+      "minutes": "0",
+      "goals": "0",
+      "assists": "0",
+      "yellow_cards": "0",
+      "red_cards": "0",
+      "rating": null
+    },
+    {
+      "league": "Premier League",
+      "date": "Dec 21, 2024",
+      "opponent": "Manchester City",
+      "score": "2-1",
+      "minutes": "0",
+      "goals": "0",
+      "assists": "0",
+      "yellow_cards": "0",
+      "red_cards": "0",
+      "rating": null
+    },
+    {
+      "league": "Premier League",
+      "date": "Dec 14, 2024",
+      "opponent": "Nottingham Forest",
+      "score": "2-1",
+      "minutes": "0",
+      "goals": "0",
+      "assists": "0",
+      "yellow_cards": "0",
+      "red_cards": "0",
+      "rating": null
+    },
+    {
+      "league": "Champions League",
+      "date": "Dec 10, 2024",
+      "opponent": "RB Leipzig",
+      "score": "2-3",
+      "minutes": "0",
+      "goals": "0",
+      "assists": "0",
+      "yellow_cards": "0",
+      "red_cards": "0",
+      "rating": null
+    }
+  ],
+  "career_history": {
+    "Senior career": [
+      {
+        "team": "Aston Villa",
+        "period": "Aug 2024 - now",
+        "appearances": 9,
+        "goals": 0
+      },
+      {
+        "team": "Bristol Rovers",
+        "period": "Aug 2023 - Jan 2024",
+        "status": "on loan",
+        "appearances": 18,
+        "goals": 0
+      },
+      {
+        "team": "Bristol Rovers",
+        "period": "Jan 2023 - Jun 2023",
+        "status": "on loan",
+        "appearances": 18,
+        "goals": 0
+      },
+      {
+        "team": "Aston Villa",
+        "period": "Jan 2021 - Jan 2023",
+        "appearances": 1,
+        "goals": 0
+      }
+    ],
+    "Youth career": [
+      {
+        "appearances": 13,
+        "goals": 0
+      },
+      {
+        "appearances": 1,
+        "goals": 0
+      },
+      {
+        "appearances": 12,
+        "goals": 1
+      },
+      {
+        "team": "Aston Villa U23",
+        "period": "Nov 2020 - Jan 2023",
+        "appearances": 24,
+        "goals": 0
+      },
+      {
+        "appearances": 15,
+        "goals": 2
+      }
+    ],
+    "National team": []
+  }
+}

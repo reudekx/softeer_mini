@@ -5,9 +5,11 @@ import { Card, CardContent, CardHeader, CardTitle } from "../ui/card";
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, ReferenceLine, Label } from 'recharts';
 import { User } from 'lucide-react';
 
-interface Site {
-  siteName: string;
-  features: string[];
+interface PlayerInfo {
+  name: string;
+  team: string;
+  position: string;
+  photoUrl?: string;
 }
 
 interface CommonStat {
@@ -28,15 +30,16 @@ interface SubjectiveMetric {
   SofaScore?: number;
   FBref?: number;
   Understat?: number;
-  Opta?: number;
-  [key: string]: string | number | undefined; // For dynamic site ratings and average
+  WhoScored?: number;
+  [key: string]: string | number | undefined;
 }
 
-interface PlayerInfo {
-  name: string;
-  team: string;
-  position: string;
-  photoUrl?: string;
+interface RecentMatch {
+  date: string;
+  opponent: string;
+  result: string;
+  minutesPlayed: number;
+  rating: number;
 }
 
 interface PlayerData {
@@ -44,11 +47,10 @@ interface PlayerData {
   commonStats: Record<string, CommonStat>;
   uniqueStats: UniqueStat[];
   subjectiveData: SubjectiveMetric[];
-  siteFeatures: Site[];
+  recentMatches: RecentMatch[];
 }
 
 const PlayerDashboard: React.FC<{ data: PlayerData }> = ({ data }) => {
-  // 평균 평점에 따른 상태 결정 함수
   const getPlayerStatus = (rating: number) => {
     if (rating <= 4.0) {
       return {
@@ -74,7 +76,6 @@ const PlayerDashboard: React.FC<{ data: PlayerData }> = ({ data }) => {
   const averageRating = data.subjectiveData.find(data => data.metric === 'Match Rating')?.average || 0;
   const status = getPlayerStatus(averageRating as number);
 
-  // 주관적 지표 데이터를 그래프용 형식으로 변환하는 함수
   const transformMetricData = (metricData: SubjectiveMetric) => {
     const sites = Object.keys(metricData).filter(key => 
       key !== 'metric' && key !== 'average' && metricData[key] !== undefined
@@ -101,7 +102,7 @@ const PlayerDashboard: React.FC<{ data: PlayerData }> = ({ data }) => {
           <h1 className="text-2xl font-bold">{data.playerInfo.name}</h1>
           <p className="text-gray-600">{data.playerInfo.team} | {data.playerInfo.position}</p>
           <div className="mt-2">
-            <span className="text-sm text-gray-500">데이터 출처: WhoScored, FotMob, SofaScore, FBref, Transfermarkt, Opta</span>
+            <span className="text-sm text-gray-500">데이터 출처: WhoScored, FotMob, SofaScore, FBref, Transfermarkt</span>
           </div>
         </div>
         <div className={`px-4 py-2 rounded-lg ${status.bgColor}`}>
@@ -110,7 +111,7 @@ const PlayerDashboard: React.FC<{ data: PlayerData }> = ({ data }) => {
         </div>
       </div>
 
-      {/* 객관적 지표 - 공통 데이터 */}
+      {/* Common Stats */}
       <Card>
         <CardHeader>
           <CardTitle>객관적 지표 (전체 사이트 공통)</CardTitle>
@@ -128,7 +129,7 @@ const PlayerDashboard: React.FC<{ data: PlayerData }> = ({ data }) => {
         </CardContent>
       </Card>
 
-      {/* 객관적 지표 - 특정 사이트 전용 */}
+      {/* Unique Stats */}
       <Card>
         <CardHeader>
           <CardTitle>객관적 지표 (특정 사이트 전용)</CardTitle>
@@ -146,7 +147,7 @@ const PlayerDashboard: React.FC<{ data: PlayerData }> = ({ data }) => {
         </CardContent>
       </Card>
 
-      {/* 주관적 지표 비교 (그래프) */}
+      {/* Subjective Metrics */}
       <Card>
         <CardHeader>
           <CardTitle>주관적 지표 비교</CardTitle>
@@ -192,19 +193,31 @@ const PlayerDashboard: React.FC<{ data: PlayerData }> = ({ data }) => {
         </CardContent>
       </Card>
 
-      {/* 사이트별 데이터 제공 현황 */}
+      {/* Recent Matches */}
       <Card>
         <CardHeader>
-          <CardTitle>사이트별 데이터 제공 현황</CardTitle>
+          <CardTitle>최근 경기</CardTitle>
         </CardHeader>
         <CardContent>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            {data.siteFeatures.map((site, index) => (
-              <div key={index} className="p-4 bg-gray-50 rounded">
-                <h3 className="font-semibold mb-2">{site.siteName}</h3>
-                {site.features.map((feature, featureIndex) => (
-                  <p key={featureIndex} className="text-sm">• {feature}</p>
-                ))}
+          <div className="space-y-4">
+            {data.recentMatches.map((match, index) => (
+              <div key={index} className="p-4 bg-gray-50 rounded grid grid-cols-6 gap-4">
+                <div className="text-center">
+                  <p className="text-sm text-gray-600">{match.date}</p>
+                </div>
+                <div className="text-center col-span-2">
+                  <p className="font-semibold">{match.opponent}</p>
+                </div>
+                <div className="text-center">
+                  <p className="font-bold">{match.result}</p>
+                </div>
+                <div className="text-center">
+                  <p className="text-sm text-gray-600">{match.minutesPlayed}분 출전</p>
+                </div>
+                <div className="text-center">
+                  <p className="text-xl font-bold">{match.rating.toFixed(1)}</p>
+                  <p className="text-xs text-gray-500">평점</p>
+                </div>
               </div>
             ))}
           </div>
