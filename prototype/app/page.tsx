@@ -1,5 +1,5 @@
 import PlayerDashboard from './components/PlayerDashboard';
-import sampleData from './data/sample-data.json';
+import sampleData from './info/sample-data.json';
 
 function App() {
   return (
