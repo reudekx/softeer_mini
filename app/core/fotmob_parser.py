@@ -3,8 +3,7 @@ from bs4 import BeautifulSoup
 from bs4 import BeautifulSoup
 import re
 
-def _parse_career_history(html: str) -> dict:
-    soup = BeautifulSoup(html, 'html.parser')
+def _parse_career_history(soup: BeautifulSoup) -> dict:
     career_data = {}
     
     # Find all career phase sections (고위급 경력, 청년 경력, 국가대표 팀)
@@ -229,6 +228,6 @@ def parse(html: str) -> bool:
     player_stats["player_traits"] = _parse_player_traits(soup)
     player_stats["player_career_main_league"] = _parse_player_career_main_league(soup)
     player_stats["match_stats"] = _parse_match_stats(soup)
-    player_stats["career_history"] = _parse_career_history(html)
+    player_stats["career_history"] = _parse_career_history(soup)
 
     return player_stats

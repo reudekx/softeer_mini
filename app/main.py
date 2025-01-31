@@ -58,6 +58,6 @@ if __name__ == "__main__":
 
     # test_kim_min_jae()
 
-    # test_son_heung_min()
+    test_son_heung_min()
 
-    test_emile_smith_rowe()
+    # test_emile_smith_rowe()

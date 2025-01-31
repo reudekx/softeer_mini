@@ -1,6 +1,5 @@
 from bs4 import BeautifulSoup
 
-
 def _parse_stats(soup: BeautifulSoup) -> dict:
 
     stats_div = soup.find("div", class_="stats_pullout")
