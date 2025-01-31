@@ -33,7 +33,7 @@ const PlayerDashboard = () => {
       metric: 'Expected Goals (xG)',
       Understat: 3.30,
       FBref: 3.35,
-      Opta: 3.40,
+      Opta: 3.40, 
       average: 3.35
     },
     {
@@ -45,6 +45,32 @@ const PlayerDashboard = () => {
     }
   ];
 
+  // 평균 평점에 따른 상태 결정 함수
+  const getPlayerStatus = (rating: number) => {
+    if (rating <= 4.0) {
+      return {
+        text: '양호',
+        color: 'text-green-600',
+        bgColor: 'bg-green-100'
+      };
+    } else if (rating <= 6.5) {
+      return {
+        text: '주의',
+        color: 'text-yellow-600',
+        bgColor: 'bg-yellow-100'
+      };
+    } else {
+      return {
+        text: '경고',
+        color: 'text-red-600',
+        bgColor: 'bg-red-100'
+      };
+    }
+  };
+
+  const averageRating = subjectiveData.find(data => data.metric === 'Match Rating')?.average || 0;
+  const status = getPlayerStatus(averageRating);
+
   return (
     <div className="w-full max-w-3xl mx-auto p-4 space-y-4 bg-gray-50">
       {/* Header */}
@@ -52,12 +78,16 @@ const PlayerDashboard = () => {
         <div className="w-24 h-24 bg-gray-200 rounded-full flex items-center justify-center">
           <User size={48} />
         </div>
-        <div>
+        <div className="flex-grow">
           <h1 className="text-2xl font-bold">에밀 스미스 로우 (Emile Smith Rowe)</h1>
           <p className="text-gray-600">풀럼 | 공격형 미드필더</p>
           <div className="mt-2">
             <span className="text-sm text-gray-500">데이터 출처: WhoScored, FotMob, SofaScore, FBref, Transfermarkt, Opta</span>
           </div>
+        </div>
+        <div className={`px-4 py-2 rounded-lg ${status.bgColor}`}>
+          <p className={`text-3xl font-bold ${status.color}`}>{status.text}</p>
+          <p className="text-sm text-gray-600">평균 평점: {averageRating.toFixed(2)}</p>
         </div>
       </div>
 
