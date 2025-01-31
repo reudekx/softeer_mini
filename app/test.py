@@ -1,7 +1,7 @@
 import json
 import os
 from pathlib import Path
-from extractor import Site, extract
+from app.core.extractor import Site, extract
 
 def ensure_directories():
     """필요한 디렉토리들을 생성합니다."""
