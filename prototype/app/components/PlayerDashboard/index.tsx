@@ -171,51 +171,57 @@ const PlayerDashboard: React.FC<{ data: PlayerData }> = ({ data }) => {
         </CardContent>
       </Card>
 
-      {/* Subjective Metrics */}
-      <Card>
-        <CardHeader>
-          <CardTitle>주관적 지표 비교</CardTitle>
-        </CardHeader>
-        <CardContent>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {data.subjectiveData.map((metricData, index) => (
-              <div key={index} className="space-y-2">
-                <div className="flex justify-between items-center">
-                  <h3 className="font-semibold">{metricData.metric}</h3>
-                  <span className="text-sm text-gray-500">평균: {metricData.average.toFixed(2)}</span>
-                </div>
-                <div className="h-48">
-                  <ResponsiveContainer width="100%" height="100%">
-                    <BarChart
-                      data={transformMetricData(metricData)}
-                      margin={{ top: 20, right: 30, left: 20, bottom: 5 }}
-                    >
-                      <CartesianGrid strokeDasharray="3 3" />
-                      <XAxis dataKey="site" />
-                      <YAxis />
-                      <Tooltip />
-                      <Bar dataKey="value" fill="#8884d8" name="평가점수" />
-                      <ReferenceLine 
-                        y={metricData.average} 
-                        stroke="#ff0000" 
-                        strokeWidth={2}
-                      >
-                        <Label 
-                          value={`평균: ${metricData.average.toFixed(2)}`}
-                          position="right"
-                          fill="#ff0000"
-                          fontSize={12}
-                          fontWeight="bold"
-                        />
-                      </ReferenceLine>
-                    </BarChart>
-                  </ResponsiveContainer>
-                </div>
-              </div>
-            ))}
+{/* Subjective Metrics */}
+<Card>
+  <CardHeader>
+    <CardTitle>주관적 지표 비교</CardTitle>
+  </CardHeader>
+  <CardContent>
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      {data.subjectiveData.map((metricData, index) => (
+        <div key={index} className="space-y-2">
+          <div className="flex justify-between items-center">
+            <h3 className="font-semibold">{metricData.metric}</h3>
+            <span className="text-sm text-gray-500">평균: {metricData.average.toFixed(2)}</span>
           </div>
-        </CardContent>
-      </Card>
+          <div className="h-64">
+            <ResponsiveContainer width="100%" height="100%">
+              <BarChart
+                data={transformMetricData(metricData)}
+                margin={{ top: 20, right: 30, left: 20, bottom: 40 }}
+              >
+                <CartesianGrid strokeDasharray="3 3" />
+                <XAxis 
+                  dataKey="site" 
+                  interval={0}
+                  angle={-45}
+                  textAnchor="end"
+                  height={60}
+                />
+                <YAxis />
+                <Tooltip />
+                <Bar dataKey="value" fill="#8884d8" name="평가점수" />
+                <ReferenceLine 
+                  y={metricData.average} 
+                  stroke="#ff0000" 
+                  strokeWidth={2}
+                >
+                  <Label 
+                    value={`평균: ${metricData.average.toFixed(2)}`}
+                    position="right"
+                    fill="#ff0000"
+                    fontSize={12}
+                    fontWeight="bold"
+                  />
+                </ReferenceLine>
+              </BarChart>
+            </ResponsiveContainer>
+          </div>
+        </div>
+      ))}
+    </div>
+  </CardContent>
+</Card>
 
 {/* Recent Matches */}
 {/* Recent Matches */}
